@@ -1,0 +1,126 @@
+/* This is my custom css for this template */
+
+.header-logo-image {
+    width: 50px;
+    height: 50px;
+}
+
+.header-logo-image-sm {
+    width: 30px;
+    height: 30px;
+    filter: brightness(90%);
+}
+
+.display-inline,
+.display-inline-sm {
+    display: flex !important;
+    filter: brightness(80%);
+    height: auto;
+    width: auto;
+    padding: 0;
+    position: relative;
+}
+
+.display-inline > span {
+    position: absolute;
+    top: -90%;
+    left: 56px;
+    font-weight: 600;
+    text-indent: 2px;
+}
+
+.display-inline-sm > span {
+    position: absolute;
+    top: -84%;
+    left: 40px;
+    font-weight: 600;
+    text-indent: 2px;
+}
+
+#info {
+    height: 50px;
+    background: transparent;
+    animation: normal;
+    transition: ease 2s;
+}
+
+.info {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 1.2em;
+}
+
+.mt-2 {
+    margin-top: 1.2em;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.footer-brand {
+    position: relative;
+    display: flex;
+    filter: brightness(90%);
+}
+
+.footer-brand > span {
+    position: absolute;
+    top: -80%;
+    left: 40px;
+}
+
+.form-control-user {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.col-sm-0 {
+    display: block;
+}
+
+.section {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.profile-image {
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+.profile-image > img {
+    width: 100px;
+    height: 100px;
+}
+
+.profile-user {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-logo-image {
+    width: 40px;
+    height: 40px;
+    }
+
+    .display-inline > span {
+    position: absolute;
+    top: -120%;
+    left: 48px;
+    font-weight: 600;
+    text-indent: 2px;
+    }
+
+    .footer-brand > span {
+    display: none;
+    }
+
+    .col-sm-0 {
+    display: none;
+    }
+}

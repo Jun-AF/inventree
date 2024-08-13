@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HarvestingController;
 use App\Http\Controllers\HaulingController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MeasurementController;
 use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\PartnerController;
@@ -28,17 +29,29 @@ Route::patch('/harvesting/{key}/update', [HarvestingController::class, 'update']
 Route::delete('/harvesting/{key/delete}', [HarvestingController::class, 'destroy'])->name('harvesting.destroy');
 Route::delete('/harvesting/truncate', [HarvestingController::class, 'truncate'])->name('harvesting.truncate');
 
-Route::get('/hauling', [HaulingController::class, 'index'])->name('hauling');
-Route::post('/hauling/store', [HaulingController::class, 'store'])->name('hauling.store');
-Route::patch('/hauling/{key}/update', [HaulingController::class, 'update'])->name('hauling.update');
-Route::delete('/hauling/{key/delete}', [HaulingController::class, 'destroy'])->name('hauling.destroy');
-Route::delete('/hauling/truncate', [HaulingController::class, 'truncate'])->name('hauling.truncate');
+Route::get('/hauling_28', [HaulingController::class, 'index'])->name('hauling_28');
+Route::post('/hauling_28/store', [HaulingController::class, 'store'])->name('hauling_28.store');
+Route::patch('/hauling_28/{key}/update', [HaulingController::class, 'update'])->name('hauling_28.update');
+Route::delete('/hauling_28/{key/delete}', [HaulingController::class, 'destroy'])->name('hauling_28.destroy');
+Route::delete('/hauling_28/truncate', [HaulingController::class, 'truncate'])->name('hauling_28.truncate');
 
-Route::get('/measurement', [MeasurementController::class, 'index'])->name('measurement');
-Route::post('/measurement/store', [MeasurementController::class, 'store'])->name('measurement.store');
-Route::patch('/measurement/{key}/update', [MeasurementController::class, 'update'])->name('measurement.update');
-Route::delete('/measurement/{key/delete}', [MeasurementController::class, 'destroy'])->name('measurement.destroy');
-Route::delete('/measurement/truncate', [MeasurementController::class, 'truncate'])->name('measurement.truncate');
+Route::get('/hauling_42', [HaulingController::class, 'index_42'])->name('hauling_42');
+Route::post('/hauling_42/store', [HaulingController::class, 'store_42'])->name('hauling_42.store');
+Route::patch('/hauling_42/{key}/update', [HaulingController::class, 'update_42'])->name('hauling_42.update');
+Route::delete('/hauling_42/{key/delete}', [HaulingController::class, 'destroy_42'])->name('hauling_42.destroy');
+Route::delete('/hauling_42/truncate', [HaulingController::class, 'truncate_42'])->name('hauling_42.truncate');
+
+Route::get('/measurement_28', [MeasurementController::class, 'index'])->name('measurement_28');
+Route::post('/measurement_28/store', [MeasurementController::class, 'store'])->name('measurement_28.store');
+Route::patch('/measurement_28/{key}/update', [MeasurementController::class, 'update'])->name('measurement_28.update');
+Route::delete('/measurement_28/{key/delete}', [MeasurementController::class, 'destroy'])->name('measurement_28.destroy');
+Route::delete('/measurement_28/truncate', [MeasurementController::class, 'truncate'])->name('measurement_28.truncate');
+
+Route::get('/measurement_42', [MeasurementController::class, 'index_42'])->name('measurement_42');
+Route::post('/measurement_42/store', [MeasurementController::class, 'store_42'])->name('measurement_42.store');
+Route::patch('/measurement_42/{key}/update', [MeasurementController::class, 'update_42'])->name('measurement_42.update');
+Route::delete('/measurement_42/{key/delete}', [MeasurementController::class, 'destroy_42'])->name('measurement_42.destroy');
+Route::delete('/measurement_42/truncate', [MeasurementController::class, 'truncate_42'])->name('measurement_42.truncate');
 
 Route::get('/operator', [OperatorController::class, 'index'])->name('operator');
 Route::post('/operator/store', [OperatorController::class, 'store'])->name('operator.store');
@@ -83,3 +96,11 @@ Route::get('user/activity/detail/{id}', [UserController::class , 'getActivity'])
     ->name('activity.detail');
 Route::post('user/activity/read_all', [UserController::class , 'readAll'])
     ->name('activity.read');
+
+// Routing Setting page    
+Route::get('settings', [HomeController::class , 'setting'])
+->name('setting');
+Route::delete('settings/trucateActivity', [HomeController::class , 'truncateActivity'])
+->name('setting.truncateActivity');
+Route::delete('settings/truncateAll', [HomeController::class , 'truncateAll'])
+->name('setting.truncate');
