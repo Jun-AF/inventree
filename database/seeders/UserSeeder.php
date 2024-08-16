@@ -22,5 +22,29 @@ class UserSeeder extends Seeder
             "role" => "Super Admin",
             "remember_token" => Str::random(10),
         ]);
+
+        User::create([
+            "name" => "planner test",
+            "email" => "planner-test@inventree.test",
+            "password" => Hash::make("password"),
+            "role" => "Planner",
+            "remember_token" => Str::random(10),
+        ]);
+
+        User::create([
+            "name" => "tuk test",
+            "email" => "tuk-test@inventree.test",
+            "password" => Hash::make("password"),
+            "role" => "Super Admin",
+            "remember_token" => Str::random(10),
+        ]);
+
+        User::create([
+            "name" => "harvesting test",
+            "email" => "harvesting-test@inventree.test",
+            "password" => Hash::make("password"),
+            "role" => "Super Admin",
+            "remember_token" => Str::random(10),
+        ]);
     }
 }
